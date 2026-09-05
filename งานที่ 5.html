@@ -1,0 +1,192 @@
+﻿<!DOCTYPE html>
+<html lang="th">
+<head>
+<title>สายสหามสามสหาย</title>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  margin: 0;
+}
+
+header {
+  background-color: #003300;
+  padding: 30px;
+  text-align: center;
+  font-size: 35px;
+  color: white;
+}
+
+nav {
+  float: left;
+  width: 20%;
+  height: 350px; 
+  background: #006633;
+  padding: 20px;
+}
+
+nav ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+nav ul li {
+  margin-bottom: 12px;
+}
+
+nav ul li a {
+  text-decoration: none;
+  color: #009933;
+  font-weight: bold;
+  cursor: pointer;
+  display: block;
+  padding: 5px;
+}
+
+nav ul li a:hover {
+  color: #009933;
+  background-color: #009900;
+  border-radius: 4px;
+}
+
+
+.content-wrapper {
+  float: left;
+  width: 80%;
+}
+
+article {
+  float: left;
+  padding: 20px;
+  width: 68.75%; /* ปรับสัดส่วนให้เข้ากับ wrapper 80% */
+  background-color: #003300;
+  height: 350px; 
+  text-align: center;
+}
+
+.friend-img {
+  width: 120px;
+  height: 120px;
+  object-fit: cover;
+  border-radius: 50%;
+  margin-bottom: 15px;
+  border: 3px solid #003300;
+}
+
+aside {
+  float: left;
+  padding: 20px;
+  width: 31.25%; /* ปรับสัดส่วนให้เข้ากับ wrapper 80% */
+  background-color: #009900;
+  height: 350px; 
+}
+
+section::after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+footer {
+  background-color: #009900;
+  padding: 10px;
+  text-align: center;
+  color: white;
+}
+
+
+#friend-box-2, #friend-box-3 {
+  display: none;
+}
+
+@media (max-width: 600px) {
+  nav, .content-wrapper, article, aside {
+    width: 100%;
+    height: auto;
+  }
+}
+</style>
+</head>
+<body>
+
+  <header>
+    <h2>รายชื่อเพื่อน</h2>
+  </header>
+
+  <section>
+    
+    <nav>
+      <h3>รายชื่อเพื่อน</h3>
+      <ul>
+        <li><a onclick="showFriend(1)">แม็ก</a></li>
+        <li><a onclick="showFriend(2)">แคท</a></li>
+        <li><a onclick="showFriend(3)">ป๋าเติ้ล</a></li>
+      </ul>
+    </nav>
+    
+    <div class="content-wrapper">
+      
+      <div id="friend-box-1">
+        <article>
+          <img src="88.jpg" alt="ภูสิทธิ์ กุลาศรี" width="400" height="200">
+          <h1>ภูสิทธิ์ กุลาศรี</h1>
+          <p>เป็นคนตลก มีน้ำใจ ช่วยเหลือเพื่อน</p>
+        </article>
+        <aside>
+          <h3>ข้อมูลเพิ่มเติม</h3>
+          <p><strong><span style='font-size:100px;'>&#128526;</span></strong>มาๆเข้าเกม</p>
+        </aside>
+      </div>
+
+      <div id="friend-box-2">
+        <article>
+         <img src="77.jpg" alt="จักริน มีพันธ์" width="400" height="200">
+          <h1>จักริน มีพันธ์</h1>
+          <p>เป็นคนเงียบๆกับคนไม่สนิท ชอบเล่นเกม</p>
+        </article>
+        <aside>
+          <h3>ข้อมูลเพิ่มเติม</h3>
+          <p><strong><span style='font-size:100px;'>&#128299;</span></strong>มาดวลฟีฟาย</p>
+        </aside>
+      </div>
+
+      <div id="friend-box-3">
+        <article>
+           <img src="66.jpg" alt="วงศกร ละละคร" width="400" height="200">
+          <h1>วงศกร ละละคร</h1>
+          <p>เฮฮา อารมณืดี </p>
+        </article>
+        <aside>
+          <h3>ข้อมูลเพิ่มเติม</h3>
+          <p><strong><span style='font-size:100px;'>&#128513;</span>
+</strong>ยิ้มทั้งวัน</p>
+        </aside>
+      </div>
+
+    </div>
+
+  </section>
+
+  <footer>
+    <p> By น้ำมนต์คนคูล; 2026</p>
+  </footer>
+
+  <script>
+    function showFriend(friendNumber) {
+
+      document.getElementById('friend-box-1').style.display = 'none';
+      document.getElementById('friend-box-2').style.display = 'none';
+      document.getElementById('friend-box-3').style.display = 'none';
+      
+
+      document.getElementById('friend-box-' + friendNumber).style.display = 'block';
+    }
+  </script>
+
+</body>
+</html>
